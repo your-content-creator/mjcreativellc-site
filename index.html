@@ -21,7 +21,7 @@
 {
  "@context":"https://schema.org",
  "@graph":[
-  {"@type":"Person","@id":"https://mjcreativellc.com/#marko","name":"Marko Josipovic","jobTitle":"Content operator","url":"https://mjcreativellc.com/","image":"https://mjcreativellc.com/media/hero-1.jpg","worksFor":{"@id":"https://mjcreativellc.com/#org"},"homeLocation":{"@type":"Place","name":"Belgrade, Serbia"},"sameAs":[]},
+  {"@type":"Person","@id":"https://mjcreativellc.com/#marko","name":"Marko Josipovic","jobTitle":"Content operator","url":"https://mjcreativellc.com/","image":"https://mjcreativellc.com/media/hero-1.jpg","worksFor":{"@id":"https://mjcreativellc.com/#org"},"homeLocation":{"@type":"Place","name":"Belgrade, Serbia"},"sameAs":["https://www.linkedin.com/in/markojoseph"]},
   {"@type":"ProfessionalService","@id":"https://mjcreativellc.com/#org","name":"MJ Creative LLC","alternateName":"MJ Creative","url":"https://mjcreativellc.com/","logo":"https://mjcreativellc.com/media/hero-1.jpg","image":"https://mjcreativellc.com/media/hero-1.jpg","email":"contact@mjcreativellc.com","founder":{"@id":"https://mjcreativellc.com/#marko"},"foundingDate":"2024-04","description":"Content systems for founders. One hour of recording a month becomes a month of content on five platforms.","areaServed":"Worldwide","sameAs":[]},
   {"@type":"WebSite","@id":"https://mjcreativellc.com/#site","url":"https://mjcreativellc.com/","name":"Marko Josipovic","publisher":{"@id":"https://mjcreativellc.com/#org"}}
  ]
@@ -84,6 +84,20 @@ h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em;line-height:1.1;font-w
 .pcard.text .shot b{font-size:clamp(40px,5vw,56px);letter-spacing:-.04em;line-height:1}
 .pcard.text .shot span{color:#c9c9c4;font-size:14px}
 .note{margin-top:14px;font-size:13px;color:var(--muted)}
+/* content examples */
+.examples{display:grid;grid-template-columns:repeat(2,minmax(0,330px));gap:24px;justify-content:start}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.ex .frame{position:relative;aspect-ratio:9/16;background:#111}
+.ex video,.ex iframe,.ex .facade{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover;display:block}
+.ex .facade{cursor:pointer;padding:0;background:#111}
+.ex .facade img{width:100%;height:100%;object-fit:cover;display:block}
+.ex .facade:after{content:"";position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:14px;background:#e2372b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23fff'/%3E%3C/svg%3E") center/26px no-repeat}
+.ex .body{padding:18px 20px 22px}
+.ex .views{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.ex .views small{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:0}
+.ex h3{font-size:16px;margin:10px 0 4px;letter-spacing:-.01em}
+.ex p{color:var(--muted);font-size:14px}
+.ex a.out{display:inline-block;margin-top:12px;font-weight:600;font-size:14px;text-decoration:underline;text-underline-offset:4px}
 /* videos */
 .videos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .vcard{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
@@ -128,6 +142,9 @@ footer .social{display:flex;gap:16px}
  .strip .s:nth-child(3){border-left:0}
  .strip .s:nth-child(n+3){border-top:1px solid var(--line)}
  .proof,.videos,.paths{grid-template-columns:1fr}
+ .examples{grid-template-columns:1fr 1fr;gap:14px}
+ .ex .views{font-size:22px}
+ .ex .body{padding:14px 14px 18px}
  section{padding:56px 0}
  .timeline{grid-template-columns:1fr;gap:28px}
  .timeline:before{top:24px;bottom:24px;left:23px;right:auto;width:2px;height:auto;background:linear-gradient(180deg,var(--accent),var(--ink))}
@@ -212,6 +229,34 @@ footer .social{display:flex;gap:16px}
  </div>
 </div></section>
 
+<section id="examples" style="padding-top:0"><div class="wrap">
+ <h2>Content examples</h2>
+ <p class="sub">Two videos I made with Andrew. Watch them here, or on the platform where they&nbsp;went&nbsp;viral.</p>
+ <div class="examples">
+  <div class="ex">
+   <div class="frame"><video src="media/ex-enhanced.mp4" poster="media/ex-enhanced.jpg" controls preload="none" playsinline></video></div>
+   <div class="body">
+    <span class="chip">Instagram reel</span>
+    <div class="views">672,561 <small>views</small></div>
+    <h3>My 5 takeaways from the Enhanced&nbsp;Games</h3>
+    <p>42,100 likes and 38,400 shares. 99% of viewers did not follow him&nbsp;yet.</p>
+    <a class="out" href="https://www.instagram.com/longevity_edu_/" target="_blank" rel="noopener">Watch on Instagram</a>
+   </div>
+  </div>
+  <div class="ex">
+   <div class="frame"><button class="facade" data-yt="r83ZVE9ieKY" aria-label="Play The 60-Second Blood Sugar Habit Worth Knowing"><img src="media/ex-bloodsugar.jpg" alt="" loading="lazy"></button></div>
+   <div class="body">
+    <span class="chip">YouTube Short</span>
+    <div class="views">78,887 <small>views</small></div>
+    <h3>The 60-Second Blood Sugar Habit Worth&nbsp;Knowing</h3>
+    <p>1,441 likes, and 371 new subscribers from one&nbsp;Short.</p>
+    <a class="out" href="https://www.youtube.com/shorts/r83ZVE9ieKY" target="_blank" rel="noopener">Watch on YouTube</a>
+   </div>
+  </div>
+ </div>
+ <p class="note">View counts as of October 3, 2026 (Instagram) and November 16, 2026&nbsp;(YouTube).</p>
+</div></section>
+
 <section id="words" style="padding-top:0"><div class="wrap">
  <h2>In their own words</h2>
  <p class="sub">Unscripted, straight from our calls and their&nbsp;recordings.</p>
@@ -287,12 +332,13 @@ footer .social{display:flex;gap:16px}
 
 <footer><div class="wrap">
  <span>© 2026 MJ Creative LLC</span>
- <span class="social" data-social></span>
+ <span class="social"><a href="https://www.linkedin.com/in/markojoseph" target="_blank" rel="noopener">LinkedIn</a></span>
  <a href="mailto:contact@mjcreativellc.com">contact@mjcreativellc.com</a>
 </div></footer>
 
 <script>
 (function(){
+ document.querySelectorAll('[data-yt]').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&playsinline=1';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.title=b.getAttribute('aria-label');b.replaceWith(f);});});
  var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
  document.querySelectorAll('[data-slides]').forEach(function(box){
   var imgs=box.querySelectorAll('img');if(imgs.length<2)return;
